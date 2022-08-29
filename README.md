@@ -29,7 +29,7 @@ We use the dense npy format to save the features in binary format. If edge featu
 ## Model Training
 Training the Graph pruning network based on an unsupervised task.
 
-    python train_gsn.py --data_set wikipedia --module_type graph_attention --prior_ratio 0.5 --learning_rate 1e-3 
+    python train_gsn.py --data_set wikipedia --prior_ratio 0.5 --learning_rate 1e-3 
 
    
 
