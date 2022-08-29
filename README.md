@@ -23,8 +23,8 @@ We use the data processing method of the reference [TGAT](https://openreview.net
 
 We use the dense npy format to save the features in binary format. If edge features or nodes features are absent, it will be replaced by a vector of zeros.   
   
-    python build_dataset_graph.py --data wikipedia ----bipartite
-    python build_dataset_graph.py --data reddit ----bipartite
+    python build_dataset_graph.py --data wikipedia --bipartite
+    python build_dataset_graph.py --data reddit --bipartite
 
 ## Model Training
 Training the Graph pruning network based on an unsupervised task.
