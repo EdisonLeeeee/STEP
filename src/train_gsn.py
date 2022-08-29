@@ -43,7 +43,7 @@ class ModelLightning(pyl.LightningModule):
         self.log('loss_sparse', loss_sparse, on_step=True, prog_bar=True, logger=False)
         self.log('loss_edge_pre', loss_edge_pre, on_step=True, prog_bar=True, logger=False)
         self.log('max_probs', x['max_probs'], on_step=True, prog_bar=True, logger=False)
-        self.log('min_probs', x['min_probs'], loss_mi, on_step=True, prog_bar=True, logger=False)
+        self.log('min_probs', x['min_probs'], on_step=True, prog_bar=True, logger=False)
         loss = loss_mi + 0.01 * loss_sparse + lambda1 * loss_edge_pre
         return loss
 
