@@ -16,7 +16,7 @@ class ModelLightning(pyl.LightningModule):
     def forward(self, batch):
         ##ToDo
 
-        x = self.backbone(
+        x = self.backbone.forward_gsn(
             batch['src_edge_feat'],
             batch['src_edge_to_time'],
             batch['src_center_node_idx'],
