@@ -1,6 +1,6 @@
-# STEP: Self-supervised Temporal Graph Pruning at Scale
+# Less Can be More: Unsupervised Graph Pruning for Large-scale Dynamic Graphs
 
-PyTorch implementation of the paper "STEP: Self-supervised Temporal Graph Pruning at Scale".
+PyTorch implementation of the paper "Less Can be More: Unsupervised Graph Pruning for Large-scale Dynamic Graphs".
 
 # Requirements
 + torch == 1.8.1
@@ -44,13 +44,3 @@ Using a gnn to evaluate the performance of graph pruning.(this requires a traine
     python train_gnn.py --mode origin --data_set wikipedia
 
     python eval_gnn.py --data_set wikipedia --mode gsn --pruning_ratio 0.5 --mask_edge --output_edge_txt ./result/edge_pred.txt --ckpt_file ./lightning_logs_gnn/lightning_logs/version_0/checkpoints/epoch=10.ckpt
-
-
-# Cite
-```bibtex
-@article{li2022step,
-  title   = {STEP: Self-supervised Temporal Graph Pruning at Scale},
-  author  = {Jintang Li and Sheng Tian},
-  year    = {2022}
-}
-```
