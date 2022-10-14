@@ -107,12 +107,12 @@ class NeighborFinder:
         edge_list = np.array([], dtype=np.int64).reshape([-1, 2])
         time_list = np.array([])
         idx_list = np.array([], dtype=np.int64)
-        # 需要得到边id->id, 每条边的时间，每条边的原始id
+
         temp_center_node = [source_node]
         temp_center_time = [timestamp]
         exclude_node = []
         for i in range(n_layer):
-            #需要排除重复的边
+
             neighbor_nodes, neighbor_edge_idxs, neighbor_times, neighbor_edge_node= self.find_before(temp_center_node, temp_center_time, n_neighbors, exclude_node)
             if len(neighbor_nodes) > 0 and n_neighbors>0:
                 idx_list = np.concatenate((idx_list, neighbor_edge_idxs))
